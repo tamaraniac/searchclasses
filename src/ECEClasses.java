@@ -1,5 +1,5 @@
 public class ECEClasses {
-    String ece110 = "<ns2:course xmlns:ns2=\"http://rest.cis.illinois.edu\" id=\"ECE 110\" href=\"https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/ECE/110.xml\">\n" +
+    String eceClasses = "<ns2:course xmlns:ns2=\"http://rest.cis.illinois.edu\" id=\"ECE 110\" href=\"https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/ECE/110.xml\">\n" +
             "<parents>\n" +
             "<calendarYear id=\"2018\" href=\"https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml\">2018</calendarYear>\n" +
             "<term id=\"120181\" href=\"https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml\">Spring 2018</term>\n" +

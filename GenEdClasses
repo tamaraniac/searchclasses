@@ -1,0 +1,363 @@
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="63470" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/MACS/100/63470.xml">
+    <parents>
+        <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+        <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+        <subject id="MACS" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/MACS.xml">Media and Cinema Studies</subject>
+        <course id="100" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/MACS/100.xml">Intro to Popular TV & Movies</course>
+    </parents>
+    <sectionNumber>AD6</sectionNumber>
+    <statusCode>A</statusCode>
+    <partOfTerm>1</partOfTerm>
+    <sectionStatusCode>A</sectionStatusCode>
+    <enrollmentStatus>Open</enrollmentStatus>
+    <startDate>2018-01-16-06:00</startDate>
+    <endDate>2018-05-02-05:00</endDate>
+    <meetings>
+        <meeting id="0">
+            <type code="DIS">Discussion/Recitation</type>
+            <start>10:00 AM</start>
+            <end>10:50 AM</end>
+            <daysOfTheWeek>R</daysOfTheWeek>
+            <roomNumber>147</roomNumber>
+            <buildingName>Armory</buildingName>
+            <instructors/>
+        </meeting>
+    </meetings>
+</ns2:section>
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="63464" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/MACS/100/63464.xml">
+<parents>
+    <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+    <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+    <subject id="MACS" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/MACS.xml">Media and Cinema Studies</subject>
+    <course id="100" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/MACS/100.xml">Intro to Popular TV & Movies</course>
+</parents>
+<sectionNumber>AL1</sectionNumber>
+<statusCode>A</statusCode>
+<partOfTerm>1</partOfTerm>
+<sectionStatusCode>A</sectionStatusCode>
+<enrollmentStatus>Open</enrollmentStatus>
+<startDate>2018-01-16-06:00</startDate>
+<endDate>2018-05-02-05:00</endDate>
+<meetings>
+    <meeting id="0">
+        <type code="LAB">Laboratory</type>
+        <start>05:00 PM</start>
+        <end>07:20 PM</end>
+        <daysOfTheWeek>T</daysOfTheWeek>
+        <roomNumber>THEAT</roomNumber>
+        <buildingName>Lincoln Hall</buildingName>
+        <instructors>
+            <instructor lastName="Heuman" firstName="J">Heuman, J</instructor>
+        </instructors>
+    </meeting>
+    <meeting id="1">
+        <type code="LEC">Lecture</type>
+        <start>02:00 PM</start>
+        <end>02:50 PM</end>
+        <daysOfTheWeek>MW</daysOfTheWeek>
+        <roomNumber>THEAT</roomNumber>
+        <buildingName>Lincoln Hall</buildingName>
+        <instructors>
+            <instructor lastName="Heuman" firstName="J">Heuman, J</instructor>
+        </instructors>
+    </meeting>
+</meetings>
+</ns2:section>
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="38757" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/CLCV/115/38757.xml">
+<parents>
+    <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+    <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+    <subject id="CLCV" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/CLCV.xml">Classical Civilization</subject>
+    <course id="115" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/CLCV/115.xml">Mythology of Greece and Rome</course>
+</parents>
+<sectionNumber>AL1</sectionNumber>
+<statusCode>A</statusCode>
+<sectionDegreeAttributes>
+    Humanities - Lit & Arts, and Cultural Studies - Western course.
+</sectionDegreeAttributes>
+<partOfTerm>1</partOfTerm>
+<sectionStatusCode>A</sectionStatusCode>
+<enrollmentStatus>CrossListOpen</enrollmentStatus>
+<startDate>2018-01-16-06:00</startDate>
+<endDate>2018-05-02-05:00</endDate>
+<meetings>
+    <meeting id="0">
+        <type code="LEC">Lecture</type>
+        <start>01:00 PM</start>
+        <end>01:50 PM</end>
+        <daysOfTheWeek>TR</daysOfTheWeek>
+        <roomNumber>THEAT</roomNumber>
+        <buildingName>Lincoln Hall</buildingName>
+        <instructors>
+            <instructor lastName="Solomon" firstName="J">Solomon, J</instructor>
+        </instructors>
+    </meeting>
+</meetings>
+</ns2:section>
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="31319" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/CLCV/115/31319.xml">
+<parents>
+    <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+    <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+    <subject id="CLCV" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/CLCV.xml">Classical Civilization</subject>
+    <course id="115" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/CLCV/115.xml">Mythology of Greece and Rome</course>
+</parents>
+<sectionNumber>ADA</sectionNumber>
+<statusCode>A</statusCode>
+<sectionDegreeAttributes>
+    Humanities - Lit & Arts, and Cultural Studies - Western course.
+</sectionDegreeAttributes>
+<partOfTerm>1</partOfTerm>
+<sectionStatusCode>A</sectionStatusCode>
+<enrollmentStatus>Open</enrollmentStatus>
+<startDate>2018-01-16-06:00</startDate>
+<endDate>2018-05-02-05:00</endDate>
+<meetings>
+    <meeting id="0">
+        <type code="DIS">Discussion/Recitation</type>
+        <start>01:00 PM</start>
+        <end>01:50 PM</end>
+        <daysOfTheWeek>F</daysOfTheWeek>
+        <roomNumber>207</roomNumber>
+        <buildingName>Gregory Hall</buildingName>
+        <instructors/>
+    </meeting>
+</meetings>
+</ns2:section>
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="31325" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/CLCV/115/31325.xml">
+<parents>
+    <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+    <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+    <subject id="CLCV" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/CLCV.xml">Classical Civilization</subject>
+    <course id="115" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/CLCV/115.xml">Mythology of Greece and Rome</course>
+</parents>
+<sectionNumber>ADG</sectionNumber>
+<statusCode>A</statusCode>
+<sectionDegreeAttributes>
+    Humanities - Lit & Arts, and Cultural Studies - Western course.
+</sectionDegreeAttributes>
+<partOfTerm>1</partOfTerm>
+<sectionStatusCode>A</sectionStatusCode>
+<enrollmentStatus>Closed</enrollmentStatus>
+<startDate>2018-01-16-06:00</startDate>
+<endDate>2018-05-02-05:00</endDate>
+<meetings>
+    <meeting id="0">
+        <type code="DIS">Discussion/Recitation</type>
+        <start>02:00 PM</start>
+        <end>02:50 PM</end>
+        <daysOfTheWeek>R</daysOfTheWeek>
+        <roomNumber>207</roomNumber>
+        <buildingName>Gregory Hall</buildingName>
+        <instructors/>
+    </meeting>
+</meetings>
+</ns2:section>
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="51145" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/PHIL/103/51145.xml">
+<parents>
+    <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+    <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+    <subject id="PHIL" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/PHIL.xml">Philosophy</subject>
+    <course id="103" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/PHIL/103.xml">Logic and Reasoning QR II</course>
+</parents>
+<sectionNumber>AL2</sectionNumber>
+<statusCode>A</statusCode>
+<partOfTerm>1</partOfTerm>
+<sectionStatusCode>A</sectionStatusCode>
+<enrollmentStatus>Open</enrollmentStatus>
+<startDate>2018-01-16-06:00</startDate>
+<endDate>2018-05-02-05:00</endDate>
+<meetings>
+    <meeting id="0">
+        <type code="LEC">Lecture</type>
+        <start>01:00 PM</start>
+        <end>01:50 PM</end>
+        <daysOfTheWeek>MW</daysOfTheWeek>
+        <roomNumber>166</roomNumber>
+        <buildingName>Bevier Hall</buildingName>
+        <instructors>
+            <instructor lastName="Weaver" firstName="C">Weaver, C</instructor>
+        </instructors>
+    </meeting>
+</meetings>
+</ns2:section>
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="58018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/PHIL/103/58018.xml">
+<parents>
+    <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+    <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+    <subject id="PHIL" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/PHIL.xml">Philosophy</subject>
+    <course id="103" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/PHIL/103.xml">Logic and Reasoning QR II</course>
+</parents>
+<sectionNumber>AD5</sectionNumber>
+<statusCode>A</statusCode>
+<partOfTerm>1</partOfTerm>
+<sectionStatusCode>A</sectionStatusCode>
+<enrollmentStatus>Open</enrollmentStatus>
+<startDate>2018-01-16-06:00</startDate>
+<endDate>2018-05-02-05:00</endDate>
+<meetings>
+    <meeting id="0">
+        <type code="DIS">Discussion/Recitation</type>
+        <start>10:00 AM</start>
+        <end>10:50 AM</end>
+        <daysOfTheWeek>F</daysOfTheWeek>
+        <roomNumber>327</roomNumber>
+        <buildingName>Gregory Hall</buildingName>
+        <instructors>
+            <instructor lastName="Louzon" firstName="N">Louzon, N</instructor>
+            <instructor lastName="Weaver" firstName="C">Weaver, C</instructor>
+        </instructors>
+    </meeting>
+</meetings>
+</ns2:section>
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="33193" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/ECON/102/33193.xml">
+<parents>
+    <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+    <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+    <subject id="ECON" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/ECON.xml">Economics</subject>
+    <course id="102" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/ECON/102.xml">Microeconomic Principles</course>
+</parents>
+<sectionNumber>A1</sectionNumber>
+<statusCode>A</statusCode>
+<sectionText>
+    This is a combined Lecture-Discussion Section, meaning you only need to register for this one CRN/section to enroll in the course. The Lecture meets in-person twice per week at the scheduled times and location listed, and the rest of the work will be completed asynchronously online, meaning ***there are NO set meetings times for the online portion.*** On-campus optional evening review sessions will be provided at various times each week to provide additional assistance to students, answering questions and going over the content as needed. --->The professor will provide additional information at the start of the class.
+</sectionText>
+<partOfTerm>1</partOfTerm>
+<sectionStatusCode>A</sectionStatusCode>
+<enrollmentStatus>Open</enrollmentStatus>
+<startDate>2018-01-16-06:00</startDate>
+<endDate>2018-05-02-05:00</endDate>
+<meetings>
+    <meeting id="0">
+        <type code="LEC">Lecture</type>
+        <start>03:30 PM</start>
+        <end>04:20 PM</end>
+        <daysOfTheWeek>TR</daysOfTheWeek>
+        <roomNumber>AUD</roomNumber>
+        <buildingName>Foellinger Auditorium</buildingName>
+        <instructors>
+            <instructor lastName="Vazquez" firstName="J">Vazquez, J</instructor>
+        </instructors>
+    </meeting>
+    <meeting id="1">
+        <type code="ONL">Online</type>
+        <start>ARRANGED</start>
+        <instructors>
+            <instructor lastName="Vazquez" firstName="J">Vazquez, J</instructor>
+        </instructors>
+    </meeting>
+</meetings>
+</ns2:section>
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="60439" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/ECON/102/60439.xml">
+<parents>
+    <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+    <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+    <subject id="ECON" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/ECON.xml">Economics</subject>
+    <course id="102" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/ECON/102.xml">Microeconomic Principles</course>
+</parents>
+<sectionNumber>BL1</sectionNumber>
+<statusCode>A</statusCode>
+<sectionText>
+    This is a 'B' Lecture section. Students must also register for a 'B' Quiz section.
+</sectionText>
+<partOfTerm>1</partOfTerm>
+<sectionStatusCode>A</sectionStatusCode>
+<enrollmentStatus>Open</enrollmentStatus>
+<startDate>2018-01-16-06:00</startDate>
+<endDate>2018-05-02-05:00</endDate>
+<meetings>
+    <meeting id="0">
+        <type code="LEC">Lecture</type>
+        <start>03:00 PM</start>
+        <end>03:50 PM</end>
+        <daysOfTheWeek>MW</daysOfTheWeek>
+        <roomNumber>THEAT</roomNumber>
+        <buildingName>Lincoln Hall</buildingName>
+        <instructors>
+            <instructor lastName="DiIanni" firstName="I">DiIanni, I</instructor>
+        </instructors>
+    </meeting>
+</meetings>
+</ns2:section>
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="67059" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/ECON/102/67059.xml">
+<parents>
+    <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+    <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+    <subject id="ECON" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/ECON.xml">Economics</subject>
+    <course id="102" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/ECON/102.xml">Microeconomic Principles</course>
+</parents>
+<sectionNumber>BQF</sectionNumber>
+<statusCode>A</statusCode>
+<partOfTerm>1</partOfTerm>
+<sectionStatusCode>A</sectionStatusCode>
+<enrollmentStatus>Open</enrollmentStatus>
+<startDate>2018-01-16-06:00</startDate>
+<endDate>2018-05-02-05:00</endDate>
+<meetings>
+    <meeting id="0">
+        <type code="Q ">Quiz</type>
+        <start>04:00 PM</start>
+        <end>04:50 PM</end>
+        <daysOfTheWeek>T</daysOfTheWeek>
+        <roomNumber>209</roomNumber>
+        <buildingName>David Kinley Hall</buildingName>
+        <instructors/>
+    </meeting>
+</meetings>
+</ns2:section>
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="52469" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/GWS/100/52469.xml">
+<parents>
+    <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+    <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+    <subject id="GWS" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/GWS.xml">Gender and Women's Studies</subject>
+    <course id="100" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/GWS/100.xml">Intro Gender & Women's Studies</course>
+</parents>
+<sectionNumber>AL1</sectionNumber>
+<statusCode>A</statusCode>
+<partOfTerm>1</partOfTerm>
+<sectionStatusCode>A</sectionStatusCode>
+<enrollmentStatus>CrossListOpen</enrollmentStatus>
+<startDate>2018-01-16-06:00</startDate>
+<endDate>2018-05-02-05:00</endDate>
+<meetings>
+    <meeting id="0">
+        <type code="LEC">Lecture</type>
+        <start>11:00 AM</start>
+        <end>11:50 AM</end>
+        <daysOfTheWeek>MW</daysOfTheWeek>
+        <roomNumber>1092</roomNumber>
+        <buildingName>Lincoln Hall</buildingName>
+        <instructors>
+            <instructor lastName="Beauchamp" firstName="T">Beauchamp, T</instructor>
+        </instructors>
+    </meeting>
+</meetings>
+</ns2:section>
+<ns2:section xmlns:ns2="http://rest.cis.illinois.edu" id="52485" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/GWS/100/52485.xml">
+<parents>
+    <calendarYear id="2018" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018.xml">2018</calendarYear>
+    <term id="120181" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring.xml">Spring 2018</term>
+    <subject id="GWS" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/GWS.xml">Gender and Women's Studies</subject>
+    <course id="100" href="https://courses.illinois.edu/cisapp/explorer/schedule/2018/spring/GWS/100.xml">Intro Gender & Women's Studies</course>
+</parents>
+<sectionNumber>AD2</sectionNumber>
+<statusCode>A</statusCode>
+<partOfTerm>1</partOfTerm>
+<sectionStatusCode>A</sectionStatusCode>
+<enrollmentStatus>CrossListOpen</enrollmentStatus>
+<startDate>2018-01-16-06:00</startDate>
+<endDate>2018-05-02-05:00</endDate>
+<meetings>
+    <meeting id="0">
+        <type code="DIS">Discussion/Recitation</type>
+        <start>09:30 AM</start>
+        <end>10:20 AM</end>
+        <daysOfTheWeek>R</daysOfTheWeek>
+        <roomNumber>125</roomNumber>
+        <buildingName>David Kinley Hall</buildingName>
+        <instructors>
+            <instructor lastName="Beauchamp" firstName="T">Beauchamp, T</instructor>
+            <instructor lastName="Cassinelli" firstName="S">Cassinelli, S</instructor>
+        </instructors>
+    </meeting>
+</meetings>
+</ns2:section>
