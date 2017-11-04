@@ -9,11 +9,6 @@ def index():
 @app.route('/coursesearch', methods=['GET', 'POST'])
 def CoursesForm():
     form = Specifications()
-    if request.method == 'POST':
-        if form.validate() == False:
-            flash('Some fields are required')
-            return render_template('form.html', title = 'Course Search', form=form)
-        else:
-            return render_template('result.html')
-    elif request.method == 'GET':
-        return render_template('form.html', title = 'Course Search', form=form)
+    if form.validate_on_submit():
+        flash()
+    return render_template('form.html', title='Course Search', form=form)
