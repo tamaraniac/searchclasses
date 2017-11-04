@@ -2,15 +2,23 @@ import requests
 from xml.etree.ElementTree import fromstring, ElementTree
 import xml.dom.minidom
 from Class import Class
+from functions import timeConvert, inString
 
 # Supposed inputs
-year = 2018
-term = 'spring'
+year = 2017
+term = 'fall'
 subjectID = 'CS' #can be None
-courseNum = '225'
+courseNum = None
 gened = 'HA'
-daysOfTheWeek = 'MWF' # might be passed in differently (as boolean)
-
+daysOfTheWeek = 'R' # might be passed in differently (as boolean)
+earliestTime = '11:00 AM'
+earliestTime = timeConvert(earliestTime)
+latestTime = '05:00 PM'
+latestTime = timeConvert(latestTime)
+breakStart = '01:00 PM'
+breakStart = timeConvert(breakStart)
+breakEnd = '02:00 PM'
+breakEnd = timeConvert(breakEnd)
 
 
 responseYear = None
@@ -20,11 +28,6 @@ responseClass = None
 courseList = []
 classList = []
 
-def inString(small, big):
-    for char in small:
-        if char not in big:
-            return False
-    return True
 
 
 response = requests.get("https://courses.illinois.edu/cisapp/explorer/schedule.xml")
@@ -76,9 +79,45 @@ if subjectID != None:
             # days of week
             qualified = True
             if daysOfTheWeek != None:
-                sectionTime = sectionRoot.find('./meetings/meeting/daysOfTheWeek').text.strip()
-                if not inString(sectionTime, daysOfTheWeek):
+                sectionTime = sectionRoot.find('./meetings/meeting/daysOfTheWeek')
+                if sectionTime != None:
+                    sectionTime.text.strip()
+                    if not inString(sectionTime, daysOfTheWeek):
+                        qualified = False
+                else:
                     qualified = False
+
+            # start and end time
+            start = sectionRoot.find('./meetings/meeting/start')
+            end = sectionRoot.find('./meetings/meeting/end')
+
+            # filter according to earliest start time
+            if earliestTime != None:
+                if qualified and start != None and start.text[:2].isnumeric():
+                    start1 = timeConvert(start.text.strip())
+                    if start1 < earliestTime:
+                        qualified = False
+                else:
+                    qualified = False
+
+            # filter according to Latest start time
+            if latestTime != None:
+                if qualified and end != None and end.text[:2].isnumeric():
+                    end1 = timeConvert(end.text.strip())
+                    if end1 > latestTime:
+                        qualified = False
+                else:
+                    qualified = False
+
+            # Break time
+            if breakStart != None and breakEnd != None:
+                if qualified and start != None and end != None \
+                    and start.text[:2].isnumeric() and end.text[:2].isnumeric():
+                    start2 = timeConvert(start.text.strip())
+                    end2 = timeConvert(end.text.strip())
+                    if (start2 < breakStart and end2 > breakStart) \
+                        or (start2 > breakStart and end2 < breakEnd):
+                        qualified = False
 
 
 
@@ -102,4 +141,5 @@ else:
 for course in classList:
     print (course.clas.get('id'), course.clas.find('./label').text)
     for section in course.sectionList:
-        print('section:', section.find('./sectionNumber').text)
+        if section.find('./sectionNumber') != None:
+            print('section:', section.find('./sectionNumber').text, 'starts at:', section.find('./meetings/meeting/start').text)
