@@ -1,6 +1,6 @@
 from flask_wtf import Form
-from wtfforms import StringField, BooleanField, SelectField
-from wtfforms.validators import DataRequired
+from wtforms import StringField, BooleanField, SelectField
+from wtforms.validators import DataRequired
 
 class Specifications(Form):
     term = StringField('term', validators=[DataRequired()])
@@ -19,17 +19,17 @@ class Specifications(Form):
     ('W', 'Western / Comparitive Cultures'), ('NW', 'Non-Western / US Minority Cultures'),
     ('HA', 'Humanities and the Arts'), ('NST', 'Natural Sciences and Technology'),
     ('QR', 'Quantitive Reasoning'), ('SBS', 'Social and Behavioral Sciences')])
-    allorany = SelectField('allorany' choices = [('all', 'All'), ('any', 'Any')])
-    mon = BooleanField('mon', default=false)
-    tue = BooleanField('tue', default=false)
-    wed = BooleanField('wed', default=false)
-    thur = BooleanField('thur', default=false)
-    fri = BooleanField('fri', default=false)
+    allorany = SelectField('allorany', choices = [('all', 'All'), ('any', 'Any')])
+    mon = BooleanField('mon', default=False)
+    tue = BooleanField('tue', default=False)
+    wed = BooleanField('wed', default=False)
+    thur = BooleanField('thur', default=False)
+    fri = BooleanField('fri', default=False)
     earliesttime = StringField('starttime')
     latesttime = StringField('latesttime')
     breakstart = StringField('breakstart')
     breakend = StringField('breakend')
-    mainquad = BooleanField('mainquad', default=false)
-    south = BooleanField('south', default=false)
-    bardeen = BooleanField('bardeen', default=false)
-    north = BooleanField('north', default=false)
+    mainquad = BooleanField('mainquad', default=False)
+    south = BooleanField('south', default=False)
+    bardeen = BooleanField('bardeen', default=False)
+    north = BooleanField('north', default=False)
