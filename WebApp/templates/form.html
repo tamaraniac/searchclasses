@@ -1,0 +1,71 @@
+{% extends "index.html" %}
+
+{% block content %}
+<form action="" method="post" name="Specifications">
+  <p>Term and Year</p>
+    Term: {{ form.term(size=80) }}<br>
+    Year: {{ form.year(size=80) }}<br>
+
+  <p>Subject</p>
+    Department: {{ form.department(size=80) }}<br>
+    Course Number: {{ form.coursenumber(size=80) }}<br>
+
+  <p>Looking for a GenEd?</p>
+  1: <select name="gened1">
+    <option value=""></option>
+    <option value="AC">Advanced Composition</option>
+    <option value="W">Western / Comparitive Cultures</option>
+    <option value="NW">Non-Western / US Minority Cultures</option>
+    <option value="HA">Humanities and the Arts</option>
+    <option value="NST">Natural Sciences and Technology</option>
+    <option value="QR">Quantitive Reasoning</option>
+    <option value="SBS">Social and Behavioral Sciences</option>
+  </select><br>
+  2: <select name="gened2">
+    <option value=""></option>
+    <option value="AC">Advanced Composition</option>
+    <option value="W">Western / Comparitive Cultures</option>
+    <option value="NW">Non-Western / US Minority Cultures</option>
+    <option value="HA">Humanities and the Arts</option>
+    <option value="NST">Natural Sciences and Technology</option>
+    <option value="QR">Quantitive Reasoning</option>
+    <option value="SBS">Social and Behavioral Sciences</option>
+  </select><br>
+  3: <select name="gened3">
+    <option value=""></option>
+    <option value="AC">Advanced Composition</option>
+    <option value="W">Western / Comparitive Cultures</option>
+    <option value="NW">Non-Western / US Minority Cultures</option>
+    <option value="HA">Humanities and the Arts</option>
+    <option value="NST">Natural Sciences and Technology</option>
+    <option value="QR">Quantitive Reasoning</option>
+    <option value="SBS">Social and Behavioral Sciences</option>
+  </select><br>
+    <input type="radio" name="allorany" value="allcat" checked> All
+    <input type="radio" name="allorany" value="anycat"> Any<br>
+
+  <p>Days of the Week</p>
+  {{ form.mon }} M
+  {{ form.tue }} T
+  {{ form.wed }} W
+  {{ form.thur }} R
+  {{ form.fri }} F
+  {{ form.sat }} Sat
+  {{ form.sun }} Sun
+
+  <p>Times</p>
+    Earliest Class Time: <input type="text" name="starttime">:00<br>
+    Latest Class Time: <input type="text" name="endtime">:00<br>
+    Want a Break? From:
+    <input type="text" name="breakstart">:00 to
+    <input type="text" name="breakend">:00<br>
+
+  <p>Location</p>
+  <input type="checkbox" name="location" value="mainquad"> Main Quad
+  <input type="checkbox" name="location" value="south"> South Quad
+  <input type="checkbox" name="location" value="bardeen"> Bardeen Quad
+  <input type="checkbox" name="location" value="north"> North Engineering Quad
+
+  <br>
+  <br>
+</form>
