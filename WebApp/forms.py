@@ -2,6 +2,8 @@ from flask_wtf import Form
 from wtforms import StringField, BooleanField, SelectField
 from wtforms.validators import DataRequired
 
+WTF_CSRF_ENABLED = False;
+
 class Specifications(Form):
     term = StringField('term', validators=[DataRequired()])
     year = StringField('year', validators=[DataRequired()])
