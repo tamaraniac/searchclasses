@@ -1,8 +1,8 @@
 import requests
 from xml.etree.ElementTree import fromstring, ElementTree
 import xml.dom.minidom
-from Class import Class
-from functions import timeConvert, inString
+from .Class import Class
+from .functions import timeConvert, inString
 
 # Supposed inputs
 year = 2017
@@ -22,8 +22,12 @@ gened = 'HA'
 gened2 = None
 gened3 = None
 
-def search(year, term, subjectID, courseNum, daysOfTheWeek, earliestTime, latestTime, breakStart, breakEnd, gened1, gened2, gened3):
+def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latestTime, breakStart, breakEnd, gened):
 
+    earliestTime = timeConvert(earliestTime)
+    latestTime = timeConvert(latestTime)
+    breakStart = timeConvert(breakStart)
+    breakEnd = timeConvert(breakEnd)
     responseYear = None
     term_dic = {'spring': 1, 'summer': 5, 'fall': 8, 'winter': 0}
     responseSubject = None
@@ -142,11 +146,11 @@ def search(year, term, subjectID, courseNum, daysOfTheWeek, earliestTime, latest
 
     return classList
 
-classList = search(year, term, subjectID, courseNum, daysOfTheWeek, earliestTime, latestTime, breakStart, breakEnd, gened, gened2, gened3)
-
-# testing
-for course in classList:
-    print (course.clas.get('id'), course.clas.find('./label').text)
-    for section in course.sectionList:
-        if section.find('./sectionNumber') != None:
-            print('section:', section.find('./sectionNumber').text, 'starts at:', section.find('./meetings/meeting/start').text)
+# classList = search(year, term, subjectID, courseNum, daysOfTheWeek, earliestTime, latestTime, breakStart, breakEnd, gened, gened2, gened3)
+#
+# # testing
+# for course in classList:
+#     print (course.clas.get('id'), course.clas.find('./label').text)
+#     for section in course.sectionList:
+#         if section.find('./sectionNumber') != None:
+#             print('section:', section.find('./sectionNumber').text, 'starts at:', section.find('./meetings/meeting/start').text)

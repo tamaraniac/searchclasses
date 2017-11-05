@@ -1,5 +1,5 @@
 def timeConvert(string):
-    if string == None:
+    if string == None or string == '':
         return None
     # Assume input is good
     h = int(string[0: 2])

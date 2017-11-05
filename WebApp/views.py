@@ -1,6 +1,7 @@
 from flask import render_template, flash, redirect
 from .forms import Specifications
 from . import app
+from .search import search
 
 #@app.route('/')
 #def index():
@@ -31,4 +32,23 @@ def CoursesForm():
         south = form.south.data
         bardeen = form.bardeen.data
         north = form.north.data
+        daysOfTheWeek = ''
+        if mon:
+            daysOfTheWeek += 'M'
+        if tue:
+            daysOfTheWeek += 'T'
+        if wed:
+            daysOfTheWeek += 'W'
+        if thur:
+            daysOfTheWeek += 'R'
+        if fri:
+            daysOfTheWeek += 'F'
+        gened = [gened1, gened2, gened3]
+
+        classList = search(term, year, department, coursenumber, daysOfTheWeek, earliesttime, latesttime, breakstart, breakend, gened)
+        return redirect('/result/<classList>')
     return render_template('form.html', title='Course Search', form=form)
+
+@app.route('/result/<classList>')
+def showResult(classList):
+    return render_template('result.html', classlist=classList)
