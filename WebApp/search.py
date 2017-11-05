@@ -1,15 +1,15 @@
 import requests
 from xml.etree.ElementTree import fromstring, ElementTree
 import xml.dom.minidom
-from .Class import Class
-from .functions import timeConvert, inString
+from Class import Class
+from functions import timeConvert, inString
 
 # Supposed inputs
 year = 2017
 term = 'fall'
 subjectID = 'CS' #can be None
 courseNum = None
-daysOfTheWeek = 'R' # might be passed in differently (as boolean)
+daysOfTheWeek = 'MWTF' # might be passed in differently (as boolean)
 earliestTime = '11:00 AM'
 earliestTime = timeConvert(earliestTime)
 latestTime = '05:00 PM'
@@ -24,10 +24,10 @@ gened3 = None
 
 def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latestTime, breakStart, breakEnd, gened):
 
-    earliestTime = timeConvert(earliestTime)
-    latestTime = timeConvert(latestTime)
-    breakStart = timeConvert(breakStart)
-    breakEnd = timeConvert(breakEnd)
+    # earliestTime = timeConvert(earliestTime)
+    # latestTime = timeConvert(latestTime)
+    # breakStart = timeConvert(breakStart)
+    # breakEnd = timeConvert(breakEnd)
     responseYear = None
     term_dic = {'spring': 1, 'summer': 5, 'fall': 8, 'winter': 0}
     responseSubject = None
@@ -42,7 +42,7 @@ def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latest
     List = root.findall('./calendarYears/calendarYear')
     # search for the year in all the years
     for element in List:
-        if element.attrib['id'] == str(year):
+        if element.get('id') == str(year):
             responseYear = requests.get(element.attrib['href'])
             break
 
@@ -85,10 +85,10 @@ def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latest
                 #-------filter out sections-------
                 # days of week
                 qualified = True
-                if daysOfTheWeek != None:
+                if daysOfTheWeek != None and daysOfTheWeek != '':
                     sectionTime = sectionRoot.find('./meetings/meeting/daysOfTheWeek')
                     if sectionTime != None:
-                        sectionTime.text.strip()
+                        sectionTime = sectionTime.text.strip()
                         if not inString(sectionTime, daysOfTheWeek):
                             qualified = False
                     else:
@@ -146,11 +146,11 @@ def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latest
 
     return classList
 
-# classList = search(year, term, subjectID, courseNum, daysOfTheWeek, earliestTime, latestTime, breakStart, breakEnd, gened, gened2, gened3)
-#
-# # testing
-# for course in classList:
-#     print (course.clas.get('id'), course.clas.find('./label').text)
-#     for section in course.sectionList:
-#         if section.find('./sectionNumber') != None:
-#             print('section:', section.find('./sectionNumber').text, 'starts at:', section.find('./meetings/meeting/start').text)
+classList = search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latestTime, breakStart, breakEnd, gened)
+
+# testing
+for course in classList:
+    print (course.clas.get('id'), course.clas.find('./label').text)
+    for section in course.sectionList:
+        if section.find('./sectionNumber') != None:
+            print('section:', section.find('./sectionNumber').text, 'starts at:', section.find('./meetings/meeting/start').text, 'on', section.find('./meetings/meeting/daysOfTheWeek').text)
