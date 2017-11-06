@@ -46,9 +46,9 @@ def CoursesForm():
         gened = [gened1, gened2, gened3]
 
         classList = search(term, year, department, coursenumber, daysOfTheWeek, earliesttime, latesttime, breakstart, breakend, gened)
-        return redirect('/result/<classList>')
+        return render_template('result.html', classList=classList)
     return render_template('form.html', title='Course Search', form=form)
 
-@app.route('/result/<classList>')
-def showResult(classList):
-    return render_template('result.html', classlist=classList)
+# @app.route('/result/<classList>')
+# def showResult(classList):
+#     return render_template('result.html', classlist=classList)

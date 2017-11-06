@@ -1,33 +1,16 @@
 import requests
 from xml.etree.ElementTree import fromstring, ElementTree
 import xml.dom.minidom
-from Class import Class
-from functions import timeConvert, inString
+from .Class import Class
+from .functions import timeConvert, inString
 
-# Supposed inputs
-year = 2017
-term = 'fall'
-subjectID = 'CS' #can be None
-courseNum = None
-daysOfTheWeek = 'MWTF' # might be passed in differently (as boolean)
-earliestTime = '11:00 AM'
-earliestTime = timeConvert(earliestTime)
-latestTime = '05:00 PM'
-latestTime = timeConvert(latestTime)
-breakStart = '01:00 PM'
-breakStart = timeConvert(breakStart)
-breakEnd = '02:00 PM'
-breakEnd = timeConvert(breakEnd)
-gened = 'HA'
-gened2 = None
-gened3 = None
 
 def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latestTime, breakStart, breakEnd, gened):
 
-    # earliestTime = timeConvert(earliestTime)
-    # latestTime = timeConvert(latestTime)
-    # breakStart = timeConvert(breakStart)
-    # breakEnd = timeConvert(breakEnd)
+    earliestTime = timeConvert(earliestTime)
+    latestTime = timeConvert(latestTime)
+    breakStart = timeConvert(breakStart)
+    breakEnd = timeConvert(breakEnd)
     responseYear = None
     term_dic = {'spring': 1, 'summer': 5, 'fall': 8, 'winter': 0}
     responseSubject = None
@@ -42,9 +25,12 @@ def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latest
     List = root.findall('./calendarYears/calendarYear')
     # search for the year in all the years
     for element in List:
-        if element.get('id') == str(year):
+        if element.get('id') == year:
             responseYear = requests.get(element.attrib['href'])
             break
+
+    if responseYear == None:
+        raise KeyError('The year of search doesn\'t exist')
 
     rootYear = fromstring(responseYear.content)
     termList = rootYear.findall('./terms/term')
@@ -53,6 +39,10 @@ def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latest
         if element.attrib['id'].endswith(str(term_dic[term])):
             responseSubject = requests.get(element.attrib['href'])
             break
+
+    if responseSubject == None:
+        raise KeyError('The term of search doesn\'t exist')
+
     rootSubjects = fromstring(responseSubject.content)
     subjectList = rootSubjects.findall('./subjects/subject')
 
@@ -62,6 +52,8 @@ def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latest
             if element.attrib['id'] == subjectID:
                 responseClass = requests.get(element.attrib['href'])
                 break
+        if responseClass == None:
+            raise KeyError('The subject of search doesn\'t exist')
         rootClass = fromstring(responseClass.content)
 
         # find course according to courseNum
@@ -72,6 +64,9 @@ def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latest
         # if there is no courseNum require, put all courses in there
         else:
             courseList = rootClass.findall('./courses/course')
+
+        if courseList == []:
+            raise KeyError('The course number of search doesn\'t exist')
 
         for course in courseList:
             responseIndiClass = requests.get(course.get('href'))
@@ -122,7 +117,7 @@ def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latest
                         and start.text[:2].isnumeric() and end.text[:2].isnumeric():
                         start2 = timeConvert(start.text.strip())
                         end2 = timeConvert(end.text.strip())
-                        if (start2 < breakStart and end2 > breakStart) \
+                        if (start2 <= breakStart and end2 > breakStart) \
                             or (start2 > breakStart and end2 < breakEnd):
                             qualified = False
 
@@ -143,14 +138,5 @@ def search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latest
             courseList += rootClass.findall('./courses/course')
 
 
-
+    
     return classList
-
-classList = search(term, year, subjectID, courseNum, daysOfTheWeek, earliestTime, latestTime, breakStart, breakEnd, gened)
-
-# testing
-for course in classList:
-    print (course.clas.get('id'), course.clas.find('./label').text)
-    for section in course.sectionList:
-        if section.find('./sectionNumber') != None:
-            print('section:', section.find('./sectionNumber').text, 'starts at:', section.find('./meetings/meeting/start').text, 'on', section.find('./meetings/meeting/daysOfTheWeek').text)

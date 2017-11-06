@@ -1,35 +1,45 @@
 {% extends "base.html" %}
 
 {% block content %}
-{{classlist}}
+
   <HEAD>
     <TITLE> Results </TITLE>
     <META NAME="Description" CONTENT="Search results are displayed below">
     <META NAME="Keywords" CONTENT="Put your keywords here. Very important for many search engines.">
     <META NAME="Author" CONTENT="Your Name Here">
   </HEAD>
-  <!–– Class Heading -->
-  <TABLE BORDER= 10 BGCOLOR="#FFBBBB">
-    <TR>
-    <TD> <b> {{id}} {{course id}} </b> </TD>
-    <TD> <b> {{label}}
-    <TD> Class description: {{description}} </TD>
-    </TR>
-  </TABLE>
+  <!-- Class Heading -->
 
-  <!-- Section -->
-  <TABLE BORDER=3 BGCOLOR="#FFCCFF">
-    <TD> <b> {{sectionNumber}} </b> </TD>
-    <TD> CRN: {{section id}} </TD>
 
-    </TR>
-    <TR>
-    <TD> Day(s): {{daysOfTheWeek}} </TD>
-    <TD> Time: {{start}} - {{end}}
-    <TD> Location: {{roomNumber}} {{buildingName}} </TD>
-    <TD> Instructor: {{instructor}} <BR> <A HREF="http://www.ratemyprofessors.com/campusRatings.jsp?sid=1112"> Check your prospective professor's ratings on RateMyProfessor.com </A> </TD>
-    </TR>
-  </TABLE>
+
+  {% for course in classList: %}
+    <TABLE BORDER= 10 BGCOLOR="#FFBBBB">
+      <TR>
+      <TD> <b> {{course.clas.get('id')}} </b> </TD>
+      <TD> <b> {{course.clas.find('./label').text}}
+      <TD> Class description: {{course.clas.find('./description').text}} </TD>
+      </TR>
+    </TABLE>
+
+    {% for section in course.sectionList: %}
+
+      <!-- Section -->
+      <TABLE BORDER=3 BGCOLOR="#FFCCFF">
+        <TD> <b> {{section.find('./sectionNumber').text}} </b> </TD>
+        <TD> CRN: {{section.get('id')}} </TD>
+
+        </TR>
+        <TR>
+        <TD> Day(s): {{section.find('./meetings/meeting/daysOfTheWeek').text}} </TD>
+        <TD> Time: {{section.find('./meetings/meeting/start').text}} - {{section.find('./meetings/meeting/end').text}}
+        <TD> Location: {{section.find('./meetings/meeting/roomNumber').text}} {{section.find('./meetings/meeting/buildingName').text}} </TD>
+        <TD> Instructor: {{section.find('./meetings/meeting/instructors/instructor').text}} <BR> <A HREF="http://www.ratemyprofessors.com/campusRatings.jsp?sid=1112"> Check your prospective professor's ratings on RateMyProfessor.com </A> </TD>
+        </TR>
+      </TABLE>
+
+    {% endfor %}
+
+  {% endfor %}
 
   </BODY>
 {% endblock %}
