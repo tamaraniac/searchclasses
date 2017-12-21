@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" name="Specifications">
+  <p>Term and Year</p>
+    Term: {{ form.term(size=80) }}<br>
+    Year: {{ form.year(size=80) }}<br>
+
+  <p>Subject</p>
+    Department: {{ form.department(size=80) }}<br>
+    Course Number: {{ form.coursenumber(size=80) }}<br>
+
+  <p>Looking for a GenEd?</p>
+  1: {{ form.gened1 }}<br>
+  2: {{ form.gened2 }}<br>
+  3: {{ form.gened3 }}<br>
+     {{ form.allorany }}<br>
+
+  <p>Days of the Week</p>
+  {{ form.mon }} M
+  {{ form.tue }} T
+  {{ form.wed }} W
+  {{ form.thur }} R
+  {{ form.fri }} F
+
+  <p>Times</p>
+    Earliest Class Time: {{ form.earliesttime(size=80) }}:00<br>
+    Latest Class Time: {{ form.latesttime(size=80) }}:00<br>
+    Want a Break? From:
+    {{ form.breakstart(size=80) }}:00 to
+    {{ form.breakend(size=80) }}:00<br>
+
+  <p>Location</p>
+  {{ form.mainquad }} Main Quad
+  {{ form.south }} South Quad
+  {{ form.bardeen }} Bardeen Quad
+  {{ form.north }} North Engineering Quad
+
+  <br>
+  <br>
+
+  <p><input type="submit" value="Submit"></p>
+</form>
+{% endblock %}
