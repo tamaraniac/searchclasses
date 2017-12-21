@@ -2,35 +2,37 @@
 
 {% block content %}
 <form action="" method="post" name="Specifications">
-  <p>Term and Year</p>
+  {{ form.csrf_token }}
+  <p><h3>Term and Year</h3></p>
     Term: {{ form.term(size=80) }}<br>
     Year: {{ form.year(size=80) }}<br>
 
-  <p>Subject</p>
+  <p><h3>Subject</h3></p>
     Department: {{ form.department(size=80) }}<br>
     Course Number: {{ form.coursenumber(size=80) }}<br>
 
-  <p>Looking for a GenEd?</p>
+  <p><h3>Looking for a GenEd?</h3></p>
   1: {{ form.gened1 }}<br>
   2: {{ form.gened2 }}<br>
   3: {{ form.gened3 }}<br>
      {{ form.allorany }}<br>
 
-  <p>Days of the Week</p>
+  <p><h3>Days of the Week</h3></p>
   {{ form.mon }} M
   {{ form.tue }} T
   {{ form.wed }} W
   {{ form.thur }} R
   {{ form.fri }} F
 
-  <p>Times</p>
+  <p><h3>Times</h3></p>
+    <b>Has to be in '12:34am' format</b> <br>
     Earliest Class Time: {{ form.earliesttime(size=80) }}:00<br>
     Latest Class Time: {{ form.latesttime(size=80) }}:00<br>
     Want a Break? From:
     {{ form.breakstart(size=80) }}:00 to
     {{ form.breakend(size=80) }}:00<br>
 
-  <p>Location</p>
+  <p><h3>Location</h3></p>
   {{ form.mainquad }} Main Quad
   {{ form.south }} South Quad
   {{ form.bardeen }} Bardeen Quad

@@ -1,6 +1,7 @@
 from flask import Flask
 
 app = Flask(__name__)
-app.config['WTF_CSRF_ENABLED'] = False
+app.config['DEBUG'] = True
+app.config['SECRET_KEY'] = 'Search whatever you want.'
 
-from . import views
+from WebApp import views

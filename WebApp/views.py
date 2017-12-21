@@ -1,7 +1,7 @@
 from flask import render_template, flash, redirect
-from .forms import Specifications
-from . import app
-from .search import search
+from WebApp.forms import Specifications
+from WebApp import app
+from WebApp.search import search
 
 #@app.route('/')
 #def index():

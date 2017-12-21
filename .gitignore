@@ -1,0 +1,7 @@
+# pycache
+__pycache__
+WebApp/__pycache__
+
+# DS_Store
+.DS_Store
+WebApp/.DS_Store
